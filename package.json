@@ -12,7 +12,13 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate:dev": "NODE_ENV=development npx sequelize-cli db:migrate",
+    "migrate:test": "NODE_ENV=test npx sequelize-cli db:migrate",
+    "migrate:prod": "NODE_ENV=production npx sequelize-cli db:migrate",
+    "rollback:dev": "NODE_ENV=development npx sequelize-cli db:migrate:undo",
+    "rollback:test": "NODE_ENV=test npx sequelize-cli db:migrate:undo",
+    "rollback:prod": "NODE_ENV=production npx sequelize-cli db:migrate:undo"
   },
   "author": "",
   "license": "ISC"
