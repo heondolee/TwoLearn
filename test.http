@@ -1,0 +1,21 @@
+### 새로운 사용자 생성
+POST http://localhost:3000/user
+Content-Type: application/json
+
+{
+    "nickName": "테스트유저",
+    "gender": true,
+    "isBurden": false,
+    "interests": "프로그래밍,여행,음악"
+}
+
+### 다른 테스트 데이터로 사용자 생성
+POST http://localhost:3000/user
+Content-Type: application/json
+
+{
+    "nickName": "홍길동",
+    "gender": false,
+    "isBurden": true,
+    "interests": "운동,요리"
+} 
